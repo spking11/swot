@@ -6,12 +6,16 @@
         {
             "label": "compile cpp file",
             "type": "cppbuild",
-            "command": "g++",
+            "command": "clang++",
             "args": [
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-std=c++17",
+                "-Wall",
+                "-fsanitize=undefined",
+                "-fsanitize-trap=undefined"
             ],
             "problemMatcher": ["$gcc"]
         }
