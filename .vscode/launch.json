@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "debug cpp file",
+            "name": "(Unix) Launch Cpp File",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
@@ -13,7 +13,6 @@
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
-            "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -27,7 +26,18 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "compile cpp file"
+            "preLaunchTask": "(Clang) Compile Cpp File"
+        },
+        {
+            "name": "(Windows) Launch Cpp File",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "preLaunchTask": "(Clang) Compile Cpp File"
         }
     ]
 }
