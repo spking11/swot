@@ -66,5 +66,14 @@
                 "isDefault": false
             }
         },
+        {
+            "label": "clean output",
+            "type": "shell",
+            "command": "find . -type f ! -name '*.cpp' -delete",
+            "options": {
+                "cwd": "${workspaceFolder}/leetcode"
+            },
+            "problemMatcher": []
+        }
     ]
 }

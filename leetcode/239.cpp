@@ -1,4 +1,4 @@
-#include <cstdint>
+#include <limits>
 #include <deque>
 #include <vector>
 
@@ -11,7 +11,7 @@ class Solution {
         }
         deque<int> que;
         vector<int> result;
-        int max = INT_MIN;
+        int max = numeric_limits<int>::min();
         for (int i = 0; i < k; i++) {
             if (nums[i] > max) {
                 max = nums[i];
